@@ -1,0 +1,305 @@
+<link rel="stylesheet" href="../style.css">
+<div class="try-status">
+
+    <div class="status-title">
+        TRY STATUS
+    </div>
+
+    <div class="status-item">
+        <span>System Status</span>
+        <strong id="systemStatus"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Brain Usage</span>
+        <strong id="brainUsage"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Confidence</span>
+        <strong id="confidence"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Source</span>
+        <strong id="source"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Verified By</span>
+        <strong id="verified"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Bug Count</span>
+        <strong id="bug"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Probability</span>
+        <strong id="probability"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Runtime</span>
+        <strong id="runtime"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Server Mood</span>
+        <strong id="serverMood"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Coffee Level</span>
+        <strong id="coffee"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Luck</span>
+        <strong id="luck"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Logic</span>
+        <strong id="logic"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Sanity Check</span>
+        <strong id="sanity"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Internet</span>
+        <strong id="internet"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>AI Opinion</span>
+        <strong id="ai"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Legal Approval</span>
+        <strong id="legal"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Current Mission</span>
+        <strong id="mission"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Last Incident</span>
+        <strong id="incident"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Danger Level</span>
+        <strong id="danger"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Version</span>
+        <strong id="version"></strong>
+    </div>
+
+    <div class="status-item">
+        <span>Powered By</span>
+        <strong id="powered"></strong>
+    </div>
+
+</div>
+
+<script>
+
+const data = {
+
+systemStatus:[
+"Online",
+"Offline",
+"Sleeping",
+"Overthinking",
+"Barely Alive"
+],
+
+brainUsage:[
+"3%",
+"28%",
+"69%",
+"97%",
+"404%"
+],
+
+confidence:[
+"2%",
+"13%",
+"42%",
+"89%",
+"100% (Probably Wrong)"
+],
+
+source:[
+"Trust me.",
+"My imagination.",
+"A random thought.",
+"Someone said so.",
+"Unknown."
+],
+
+verified:[
+"Nobody.",
+"My cat.",
+"The voices.",
+"One intern.",
+"Trust Me Bro™."
+],
+
+bug:[
+"0",
+"3",
+"42",
+"Feature.",
+"Don't Ask."
+],
+
+probability:[
+"Probably.",
+"Very Likely.",
+"Maybe.",
+"Absolutely Not.",
+"Depends."
+],
+
+runtime:[
+"12 seconds.",
+"Forever.",
+"Long enough.",
+"Too long.",
+"Still running."
+],
+
+serverMood:[
+"Happy.",
+"Sleepy.",
+"Confused.",
+"Angry.",
+"Existential."
+],
+
+coffee:[
+"0%",
+"50%",
+"Critical.",
+"Overflowing.",
+"Need Refill."
+],
+
+luck:[
+"+1",
+"+7",
+"-3",
+"MAX",
+"Undefined"
+],
+
+logic:[
+"Enabled.",
+"Disabled.",
+"Optional.",
+"Missing.",
+"Out of Stock."
+],
+
+sanity:[
+"Passed.",
+"Skipped.",
+"Failed.",
+"Loading...",
+"Not Found."
+],
+
+internet:[
+"Connected.",
+"Disconnected.",
+"Somehow Working.",
+"Borrowing Neighbor Wi-Fi.",
+"Questionable."
+],
+
+ai:[
+"I have concerns.",
+"Looks fine.",
+"Probably terrible.",
+"Interesting choice.",
+"No comment."
+],
+
+legal:[
+"Approved.",
+"Denied.",
+"Pending.",
+"Please Don't.",
+"Nobody Asked."
+],
+
+mission:[
+"Look busy.",
+"Confuse visitors.",
+"Generate chaos.",
+"Do absolutely nothing.",
+"Survive."
+],
+
+incident:[
+"Just now.",
+"5 seconds ago.",
+"Yesterday.",
+"Never happened.",
+"Classified."
+],
+
+danger:[
+"Safe.",
+"Low.",
+"Moderate.",
+"High.",
+"Mostly Harmless."
+],
+
+version:[
+"v0.0.1",
+"v0.9 Beta",
+"v1.0",
+"Final_Final_REAL.zip",
+"Works On My Machine"
+],
+
+powered:[
+"Coffee.",
+"Poor Decisions.",
+"Stack Overflow.",
+"Hope.",
+"Duct Tape."
+]
+
+};
+
+function random(arr){
+    return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function loadStatus(){
+
+    for(const key in data){
+
+        document.getElementById(key).textContent = random(data[key]);
+
+    }
+
+}
+
+loadStatus();
+
+</script>

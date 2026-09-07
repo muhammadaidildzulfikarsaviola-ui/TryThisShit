@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY REASON_</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .reason-container {
+            max-width: 650px;
+            margin: 50px auto;
+            background: #fff;
+            border: 4px solid #111;
+            padding: 30px;
+            box-shadow: 10px 10px 0px #111;
+            transform: rotate(-1deg);
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            border: 3px solid #111;
+            padding: 12px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            background: #fffacd;
+            box-shadow: 4px 4px 0px #111;
+            resize: none;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        textarea:focus {
+            outline: none;
+            background: #ffccff;
+        }
+        .result-box {
+            margin-top: 25px;
+            border: 3px dashed #111;
+            padding: 20px;
+            background: #e0ffff;
+            display: none;
+        }
+        .star-rating {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body style="background-color: #e3e3dc; padding: 20px;">
+
+    <div class="reason-container">
+        <h1>TRY REASON_</h1>
+        <p>Drop your absolute worst excuse below. Let the system judge your pathetic attempt at justifying your laziness.</p>
+
+        <textarea id="excuseInput" placeholder="Example: I couldn't finish my work because I was waiting for a good mood to arrive from Mars..."></textarea>
+        
+        <button id="judgeBtn" class="btn-coba" style="width: 100%; background: #ff3366; color: #fff; font-size: 1.1rem; padding: 12px; cursor: pointer; border: 3px solid #111; box-shadow: 4px 4px 0px #111; font-weight: bold;">[JUDGE MY NONSENSE]</button>
+
+        <div id="resultBox" class="result-box">
+            <h3 id="verdictTitle" style="margin-top:0; text-transform:uppercase;"></h3>
+            <p><strong>Rating:</strong> <span id="starText" class="star-rating"></span></p>
+            <p><strong>Score:</strong> <span id="scoreText"></span></p>
+            <p><strong>Verdict:</strong> <span id="commentText"></span></p>
+        </div>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="../index.html" style="font-weight: bold; color: #111; text-decoration: underline;">&larr; BACK TO LAB</a>
+        </div>
+    </div>
+
+<script>
+        const verdicts = [
+            { verdict: "TOTAL BULLSHIT", comment: "How many seconds did your brain take to cook up this pathetic lie? It shows." },
+            { verdict: "ACCEPTABLE IN THE STONE AGE", comment: "Maybe if you lived 10,000 years ago, a dinosaur would buy this excuse." },
+            { verdict: "EMBARRASSING", comment: "Even as a collection of basic code lines, I'm embarrassed reading this." },
+            { verdict: "CREATIVE BUT USELESS", comment: "The effort is mildly impressive, but it's still pure garbage." },
+            { verdict: "ZERO EFFORT", comment: "Even your attempt to make up an excuse looks completely lazy." },
+            { verdict: "MASTERPIECE OF LAZINESS", comment: "You honestly deserve a Nobel prize in professional slacking." }
+        ];
+
+        document.getElementById('judgeBtn').addEventListener('click', function() {
+            const input = document.getElementById('excuseInput').value.trim();
+            const resultBox = document.getElementById('resultBox');
+            
+            if(!input) {
+                alert("Type your excuse first, don't just stare at the screen!");
+                return;
+            }
+
+            const rawScore = Math.random() * 5; // Nilai dasar 0 - 5 untuk bintang
+            const scoreOutOfTen = (rawScore * 2).toFixed(1); // Diubah jadi skala 0 - 10
+
+            // Bintang tetap pakai 5 maksimal berdasarkan rawScore
+            const fullStars = Math.round(rawScore);
+            let starsHtml = "";
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars) {
+                    starsHtml += "★";
+                } else {
+                    starsHtml += "☆";
+                }
+            }
+
+            const randomVerdict = verdicts[Math.floor(Math.random() * verdicts.length)];
+
+            document.getElementById('verdictTitle').innerText = "--- JUDGMENT RESULT ---";
+            document.getElementById('starText').innerText = starsHtml + ` (${scoreOutOfTen}/10)`;
+            document.getElementById('scoreText').innerText = scoreOutOfTen + " / 5.0";
+            document.getElementById('commentText').innerText = randomVerdict.comment + ` ("${randomVerdict.verdict}")`;
+            
+            resultBox.style.display = "block";
+            resultBox.style.transform = `rotate(${Math.random() * 2 - 1}deg)`;
+        });
+    </script>
+</body>
+</html>

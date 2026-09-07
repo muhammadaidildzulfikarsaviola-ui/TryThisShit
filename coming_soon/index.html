@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRYTHIS_ // SOON</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div class="card" style="width: 350px; text-align: center; background-color: #ff3366; color: #fff; transform: rotate(0deg);">
+        <h3 id="experiment-title" style="border-bottom: 2px solid #fff; padding-bottom: 10px;">EXP_NOT_FOUND</h3>
+        <p style="margin: 20px 0; font-size: 0.9rem;">very bored for development</p>
+        <a href="../index.html" class="btn-coba" style="background-color: #00ffff; color: #111;">[Back to home]</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const expName = urlParams.get('name');
+        if (expName) {
+            document.getElementById('experiment-title').innerText = expName;
+        }
+    </script>
+</body>
+</html>

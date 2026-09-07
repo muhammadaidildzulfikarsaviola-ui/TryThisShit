@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY LUCK_</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container {
+            max-width: 650px;
+            margin: 50px auto;
+            background: #fff;
+            border: 4px solid #111;
+            padding: 30px;
+            box-shadow: 10px 10px 0px #111;
+            transform: rotate(-1deg);
+            text-align: center;
+        }
+        .luck-box {
+            font-size: 1.5rem;
+            margin: 25px 0;
+            border: 3px solid #111;
+            background: #e0ffff;
+            padding: 20px;
+            box-shadow: 5px 5px 0px #111;
+        }
+    </style>
+</head>
+<body style="background-color: #e3e3dc; padding: 20px;">
+
+    <div class="container">
+        <h1>TRY LUCK_</h1>
+        <p>Test your daily luck. Will you win big or lose your dignity?</p>
+
+        <div id="luckDisplay" class="luck-box">Press the button to test your fate.</div>
+
+        <button id="luckBtn" class="btn-coba" style="width: 100%; background: #ffcc00; color: #111; font-size: 1.1rem; padding: 12px; cursor: pointer; border: 3px solid #111; box-shadow: 4px 4px 0px #111; font-weight: bold;">[TEST MY LUCK]</button>
+
+        <div style="margin-top: 20px;">
+            <a href="../index.html" style="font-weight: bold; color: #111; text-decoration: underline;">&larr; BACK TO LAB</a>
+        </div>
+    </div>
+
+    <script>
+        const fortunes = [
+            "Critical Failure: You tripped over nothing and lost 50 IQ points.",
+            "Minor Win: You found $1 on the street, but dropped your phone in a puddle.",
+            "Absolute Disaster: Mercury is in retrograde and it shows.",
+            "Legendary Luck: Absolutely nothing bad happened. Boring.",
+            "Scammed: You won a free cruise to nowhere.",
+            "Error: Luck not found. Please try again next life."
+        ];
+
+        document.getElementById('luckBtn').addEventListener('click', function() {
+            const result = fortunes[Math.floor(Math.random() * fortunes.length)];
+            document.getElementById('luckDisplay').innerText = result;
+        });
+    </script>
+</body>
+</html>

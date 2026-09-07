@@ -1,0 +1,350 @@
+==========================================================
+PROJECT
+TRYTHIS
+
+TAGLINE
+
+Internet's Playground for Weird Ideas.
+
+STATUS
+
+Long-Term Personal Project
+
+==========================================================
+
+WHAT IS TRYTHIS?
+
+TRYTHIS bukan satu website.
+
+TRYTHIS adalah sebuah playground digital yang berisi
+puluhan bahkan ratusan eksperimen kecil.
+
+Setiap eksperimen dibuat karena satu alasan sederhana.
+
+"Eh... gimana kalau bikin beginian ya?"
+
+Tidak semua harus berguna.
+
+Tidak semua harus masuk akal.
+
+Yang penting menarik untuk dicoba.
+
+==========================================================
+
+VISION
+
+Membangun tempat di internet yang dipenuhi
+eksperimen-eksperimen kecil, absurd, kreatif,
+dan kadang benar-benar tidak diperlukan.
+
+Website ini bukan dibuat untuk menjadi startup.
+
+Bukan dibuat untuk menjadi unicorn.
+
+Bukan dibuat untuk menyelesaikan semua masalah.
+
+Website ini dibuat untuk mengembalikan rasa penasaran
+yang dulu pernah dimiliki internet.
+
+==========================================================
+
+CORE PRINCIPLE
+
+Every experiment starts with one word.
+
+TRY.
+
+==========================================================
+
+PHILOSOPHY
+
+Internet terlalu serius.
+
+Semua orang berlomba membuat AI.
+
+Semua orang berlomba membuat aplikasi produktivitas.
+
+Semua orang berlomba menjadi perusahaan besar.
+
+TRYTHIS memilih jalan yang berbeda.
+
+Membuat hal-hal kecil yang mungkin hanya membuat
+seseorang tersenyum selama 30 detik.
+
+Kadang itu sudah cukup.
+
+==========================================================
+
+DESIGN PRINCIPLE
+
+- Simple.
+- Fast.
+- One page if possible.
+- No unnecessary complexity.
+- Every experiment should feel unique.
+- Every page should have personality.
+- Every text should sound human.
+- Humor comes before perfection.
+
+==========================================================
+
+STYLE
+
+Tone:
+
+- Friendly
+- Playful
+- Slightly sarcastic
+- Curious
+- Never mean
+- Never too formal
+
+==========================================================
+
+STRUCTURE
+
+TRYTHIS
+
+│
+
+├── Experiments
+
+│
+
+├── Archive
+
+│
+
+├── Failed Experiments
+
+│
+
+└── About The Lab
+
+==========================================================
+
+EXPERIMENT LIST
+
+TRY REASON
+
+Menilai alasan pengguna.
+
+Output berupa skor, verdict,
+dan komentar absurd.
+
+-------------------------
+
+TRY BAND NAME
+
+Generate nama band random.
+
+Bisa berdasarkan genre.
+
+Bisa berdasarkan mood.
+
+Bisa berdasarkan satu kata.
+
+-------------------------
+
+TRY YOUR LUCK
+
+Website berpura-pura mengetahui
+keberuntungan hari ini.
+
+Hasil selalu random.
+
+-------------------------
+
+TRY DECISION
+
+Membantu memilih dua pilihan.
+
+Kadang jawabannya masuk akal.
+
+Kadang malah bikin bingung.
+
+-------------------------
+
+TRY AI JUDGE
+
+AI menilai ide pengguna.
+
+Tidak mencari jawaban benar.
+
+Hanya memberikan opini yang menghibur.
+
+-------------------------
+
+TRY ROAST
+
+User memasukkan sesuatu.
+
+Website me-roast dengan cara lucu.
+
+-------------------------
+
+TRY CAT OR MUFFIN
+
+Game menebak gambar.
+
+Kucing atau muffin?
+
+Ternyata susah.
+
+-------------------------
+
+TRY CHALLENGE
+
+Memberikan tantangan random.
+
+Ada yang mudah.
+
+Ada yang absurd.
+
+Ada yang benar-benar bisa dilakukan.
+
+-------------------------
+
+TRY LIFE
+
+Masukkan sesuatu.
+
+Website memberikan jawaban
+seolah-olah kehidupan memiliki API.
+
+==========================================================
+
+FUTURE EXPERIMENTS
+
+TRY RANDOM
+
+TRY BUTTON
+
+TRY COLOR
+
+TRY MUSIC
+
+TRY LEAF AI
+
+TRY PRODUCTIVITY
+
+TRY PICKUP LINE
+
+TRY COFFEE
+
+TRY MEME
+
+TRY EMOTION
+
+TRY BRAIN
+
+TRY COIN
+
+TRY DICE
+
+TRY PASSWORD
+
+TRY EXCUSE PRO
+
+TRY RISK
+
+TRY FUTURE
+
+TRY REGRET
+
+TRY MONDAY
+
+TRY WEEKEND
+
+dan eksperimen lain yang muncul
+karena ide random jam 2 pagi.
+
+==========================================================
+
+FAILED EXPERIMENTS
+
+Tidak semua eksperimen berhasil.
+
+Beberapa sengaja dipajang
+meskipun gagal.
+
+Karena gagal juga bagian dari proses.
+
+==========================================================
+
+ROADMAP
+
+Tidak ada roadmap.
+
+Kalau ada ide baru.
+
+Buat.
+
+Kalau tidak ada.
+
+Istirahat.
+
+==========================================================
+
+MONETIZATION
+
+Bukan tujuan utama.
+
+Jika suatu hari website ini berkembang,
+dukungan dapat berasal dari:
+
+- Try Supporting
+- Buy Me a Coffee
+- Donasi
+- Merchandise
+- Affiliate
+- Iklan
+
+Semua bersifat opsional.
+
+==========================================================
+
+ABOUT THE LAB
+
+Website ini adalah laboratorium.
+
+Setiap halaman adalah eksperimen.
+
+Setiap eksperimen memiliki identitasnya sendiri.
+
+Beberapa berhasil.
+
+Beberapa gagal.
+
+Semuanya tetap layak dicoba.
+
+==========================================================
+
+LONG TERM GOAL
+
+Tidak mengejar jumlah pengguna.
+
+Tidak mengejar viral.
+
+Tidak mengejar startup.
+
+Tujuan utamanya adalah membuat
+sebuah tempat yang selalu bisa ditambah
+setiap kali muncul ide baru.
+
+Lima tahun dari sekarang,
+TRYTHIS diharapkan menjadi koleksi
+puluhan atau ratusan eksperimen kecil
+yang masing-masing punya cerita sendiri.
+
+==========================================================
+
+FINAL MESSAGE
+
+The internet doesn't always need another useful website.
+
+Sometimes...
+
+it just needs another weird one.
+
+==========================================================p
