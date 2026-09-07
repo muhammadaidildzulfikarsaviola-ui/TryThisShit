@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY BAND NAME_</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container { max-width: 700px; margin: 50px auto; background: #fff; border: 4px solid #111; padding: 30px; box-shadow: 10px 10px 0 #111; transform: rotate(-1deg); }
+        select, input { width: 100%; padding: 12px; border: 3px solid #111; background: #fffacd; font: inherit; margin: 8px 0 18px; box-shadow: 3px 3px 0 #111; }
+        .result { margin-top: 25px; padding: 25px; border: 3px dashed #111; background: #ffccff; display: none; text-align: center; }
+        .band-name { font-size: clamp(2rem, 8vw, 4rem); font-weight: 900; text-transform: uppercase; line-height: .95; }
+        .small { font-size: .8rem; margin-top: 15px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>TRY BAND NAME_</h1>
+    <p>Generate a band name with enough fake confidence to survive at least one rehearsal.</p>
+
+    <label><strong>Genre</strong></label>
+    <select id="genre">
+        <option value="any">Anything questionable</option>
+        <option value="emo">Emo / Post-Hardcore</option>
+        <option value="punk">Pop Punk</option>
+        <option value="rock">Alternative Rock</option>
+        <option value="metal">Metal</option>
+        <option value="indie">Indie / Math Rock</option>
+    </select>
+
+    <label><strong>One word</strong> <span class="small">(optional)</span></label>
+    <input id="seed" type="text" maxlength="24" placeholder="e.g. Saviola">
+
+    <button id="generate" class="btn-coba" type="button">[GENERATE BAND NAME]</button>
+
+    <div class="result" id="result">
+        <div class="band-name" id="bandName"></div>
+        <div id="tagline"></div>
+    </div>
+
+    <div style="margin-top:20px;text-align:center"><a href="../index.html" style="font-weight:bold;color:#111">&larr; BACK TO LAB</a></div>
+</div>
+<script>
+const pools = {
+    any: [['Velvet','Static'],['Plastic','Funeral'],['Midnight','Receipt'],['Tiny','Disaster'],['Neon','Regret']],
+    emo: [['Empty','Apartment'],['Last','September'],['Static','Hearts'],['Permanent','Damage'],['Sunday','Funeral']],
+    punk: [['Parking Lot','Riot'],['Cheap','Thrill'],['Dead','Weekend'],['Basement','Kids'],['Broken','Amp']],
+    rock: [['Black','Signal'],['Paper','Ghost'],['Modern','Noise'],['Silver','Machine'],['Cold','Summer']],
+    metal: [['Grave','Engine'],['Iron','Mourning'],['Blood','Circuit'],['Ashen','Empire'],['Hollow','Crown']],
+    indie: [['Parallel','Coffee'],['Soft','Geometry'],['Pocket','Weather'],['Minor','Miracle'],['Quiet','Frequency']]
+};
+const tails = ['sounds expensive.', 'already has three demos.', 'definitely needs a bassist.', 'will break up after the second EP.', 'is somehow already taken.'];
+function pick(a){ return a[Math.floor(Math.random()*a.length)]; }
+document.getElementById('generate').addEventListener('click', () => {
+    const seed = document.getElementById('seed').value.trim();
+    const genre = document.getElementById('genre').value;
+    let name;
+    if (seed) {
+        const formats = [`${seed} & The Unnecessary`, `The ${seed} Incident`, `${seed} Funeral Club`, `Saint ${seed}`, `${seed} Was A Mistake`];
+        name = pick(formats);
+    } else {
+        const pair = pick(pools[genre]);
+        name = pair[0] + ' ' + pair[1];
+    }
+    document.getElementById('bandName').textContent = name;
+    document.getElementById('tagline').textContent = pick(tails);
+    document.getElementById('result').style.display = 'block';
+});
+</script>
+</body>
+</html>
