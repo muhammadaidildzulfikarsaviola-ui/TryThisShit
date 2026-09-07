@@ -1,125 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --paper: #e3e3dc;
+    --ink: #111;
+    --pink: #ff3366;
+    --cyan: #00ffff;
+    --yellow: #ffcc00;
+    --cream: #fffacd;
+    --mint: #e0ffff;
+    --pink-soft: #ffccff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #e3e3dc;
-    color: #111;
+    background-color: var(--paper);
+    color: var(--ink);
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
-    padding: 30px;
+    padding: 30px 18px 60px;
     overflow-x: hidden;
 }
 
-/* Header dibikin full tapi tetep miring & brutal */
+body::selection {
+    background: var(--ink);
+    color: var(--cyan);
+}
+
 .header-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    border: 4px solid #111;
-    padding: 25px;
-    background-color: #ff3366;
-    box-shadow: 10px 10px 0px #111;
-    transform: rotate(-1.5deg);
+    width: min(94%, 1220px);
+    margin: 0 auto 55px;
+    border: 4px solid var(--ink);
+    padding: clamp(20px, 4vw, 38px);
+    background: var(--pink);
+    box-shadow: 12px 12px 0 var(--ink);
+    transform: rotate(-1deg);
+    position: relative;
+}
+
+.header-container::after {
+    content: 'LAB_STATUS: UNSTABLE';
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    padding: 5px 8px;
+    font-weight: 700;
+    font-size: .72rem;
+    transform: rotate(2deg);
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.6rem, 8vw, 5.3rem);
+    line-height: .9;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -4px;
 }
 
 .tagline {
-    font-size: 1.2rem;
-    background: #00ffff;
+    font-size: clamp(.9rem, 2vw, 1.2rem);
+    background: var(--cyan);
     display: inline-block;
-    padding: 4px 8px;
-    border: 2px solid #111;
+    padding: 6px 9px;
+    border: 2px solid var(--ink);
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
-/* Layout full layar & sengaja di-acak posisinya */
+.lab-intro {
+    max-width: 760px;
+    margin: -8px auto 28px;
+    text-align: center;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
 .chaos-container {
-    width: 95%;
-    max-width: 1400px;
+    width: min(96%, 1450px);
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 26px;
+    align-items: stretch;
+    padding-bottom: 30px;
 }
 
-/* Kotak-kotak dibuat rotasi acak biar keliatan berantakan */
 .card {
-    width: 240px;
-    min-height: 160px;
-    border: 3px solid #111;
-    background-color: #fff;
+    min-height: 185px;
+    border: 3px solid var(--ink);
+    background: #fff;
     padding: 18px;
-    box-shadow: 6px 6px 0px #111;
+    box-shadow: 7px 7px 0 var(--ink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: 0.15s ease;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease;
 }
 
-/* Bikin variasi rotasi acak per kartu biar gak kaku */
 .card:nth-child(3n) {
-    background-color: #fffacd;
-    transform: rotate(2deg) translateY(-5px);
+    background-color: var(--cream);
+    transform: rotate(1.5deg) translateY(-4px);
 }
 
-.card:nth-child(3n+1) {
-    background-color: #e0ffff;
-    transform: rotate(-2.5deg) translateX(5px);
+.card:nth-child(3n + 1) {
+    background-color: var(--mint);
+    transform: rotate(-1.5deg) translateX(3px);
 }
 
-.card:nth-child(3n+2) {
-    background-color: #ffccff;
-    transform: rotate(1.5deg) translateY(8px);
+.card:nth-child(3n + 2) {
+    background-color: var(--pink-soft);
+    transform: rotate(.9deg) translateY(5px);
 }
 
 .card:hover {
     background-color: #ff6600;
     color: #fff;
-    transform: scale(1.05) rotate(0deg) !important;
-    box-shadow: 10px 10px 0px #111;
-    z-index: 10;
-}
-
-.card:hover a.btn-coba {
-    background-color: #111;
-    color: #fff;
+    transform: translateY(-5px) rotate(0deg) !important;
+    box-shadow: 11px 11px 0 var(--ink);
+    z-index: 2;
 }
 
 .card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
+    margin: 0;
+    font-size: 1.06rem;
     text-transform: uppercase;
-    border-bottom: 2px solid #111;
-    padding-bottom: 6px;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 7px;
 }
 
 .card p {
-    font-size: 0.85rem;
-    line-height: 1.3;
+    font-size: .84rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
 }
 
-a.btn-coba {
+.btn-coba {
     display: block;
+    width: 100%;
     text-align: center;
-    color: #111;
+    color: var(--ink);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: .82rem;
     font-weight: bold;
-    background: #ffcc00;
-    padding: 6px;
-    border: 2px solid #111;
-    box-shadow: 3px 3px 0px #111;
-    margin-top: 15px;
+    background: var(--yellow);
+    padding: 8px;
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    margin-top: 12px;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-a.btn-coba:active {
-    box-shadow: 0px 0px 0px #111;
+.btn-coba:hover {
+    background: var(--ink);
+    color: #fff;
+}
+
+.btn-coba:active {
+    box-shadow: 0 0 0 var(--ink);
     transform: translate(3px, 3px);
+}
+
+.site-footer {
+    width: min(96%, 900px);
+    margin: 35px auto 0;
+    padding-top: 18px;
+    border-top: 3px solid var(--ink);
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 18px 12px 40px;
+    }
+
+    .header-container {
+        width: 96%;
+        margin-bottom: 42px;
+    }
+
+    .header-container::after {
+        right: 10px;
+        font-size: .62rem;
+    }
+
+    .chaos-container {
+        width: 96%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card,
+    .card:nth-child(3n),
+    .card:nth-child(3n + 1),
+    .card:nth-child(3n + 2) {
+        transform: none;
+    }
 }
