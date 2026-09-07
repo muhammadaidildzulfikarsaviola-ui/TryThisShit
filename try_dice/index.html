@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>TRY DICE_</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.container{max-width:700px;margin:50px auto;background:#fff;border:4px solid #111;padding:30px;box-shadow:10px 10px 0 #111;transform:rotate(.8deg);text-align:center}.dice{font-size:7rem;line-height:1;margin:30px 0;border:3px solid #111;background:#fffacd;padding:25px;box-shadow:5px 5px 0 #111}.note{margin-top:18px;font-size:.85rem}.rolling{animation:shake .18s infinite}@keyframes shake{0%{transform:translate(0)}25%{transform:translate(4px,-3px) rotate(3deg)}50%{transform:translate(-3px,3px) rotate(-2deg)}75%{transform:translate(3px,2px) rotate(2deg)}100%{transform:translate(0)}}
+</style></head>
+<body><div class="container"><h1>TRY DICE_</h1><p>Roll a suspiciously confident digital die. Fate has outsourced itself to JavaScript.</p><div id="dice" class="dice">⚄</div><button id="roll" class="btn-coba" type="button">[ROLL THE THING]</button><p id="result" class="note">Waiting for bad decisions.</p><div style="margin-top:20px"><a href="../index.html" style="font-weight:bold;color:#111">&larr; BACK TO LAB</a></div></div>
+<script>const faces=['⚀','⚁','⚂','⚃','⚄','⚅'];const lines=['The universe picked a number. Why? Nobody knows.','Suspiciously average.','A statistically unnecessary victory.','You may now pretend this was skill.','Excellent. Meaningless, but excellent.','The die has chosen violence.'];const d=document.getElementById('dice'),r=document.getElementById('result');document.getElementById('roll').addEventListener('click',()=>{d.classList.add('rolling');r.textContent='Rolling...';setTimeout(()=>{const n=Math.floor(Math.random()*6);d.textContent=faces[n];r.textContent=`You rolled ${n+1}. ${lines[n]}`;d.classList.remove('rolling')},550)});</script></body></html>
